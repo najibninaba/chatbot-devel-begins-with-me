@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row top-buffer">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1>Sample Web Page to show WebChat integration</h1>
+                    <p>Welcome! Please click on the button below to directly converse with our Chatbot.</p>
+                    <p>
+                        <a id="btn-webchat" class="btn btn-primary btn-lg" href="#webchat">Webchat</a></p>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        <br />
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+        <script>(function () {
+    var div = document.createElement("div");
+    document.getElementsByTagName('body')[0].appendChild(div);
+    div.outerHTML = "<div id='botDiv' style='height: 38px; position: fixed; right:0; ;bottom: 0; z-index: 1000; background-color: #fff'><div id='botTitleBar' style='height: 38px; width: 400px; position:fixed; cursor: pointer;'></div><iframe width='400px' height='600px' src='https://webchat.botframework.com/embed/qnabotnajib-20180307-01?s=ubcHRP2fMbw.cwA.ucE.GIVD8hNgcXQaTlW2Do0jzCF6-REpyeEE7o5UUckegus'></iframe></div>"; 
+
+    document.querySelector('body').addEventListener('click', function (e) {
+        e.target.matches = e.target.matches || e.target.msMatchesSelector;
+        if (e.target.matches('#botTitleBar')) { 
+            var botDiv = document.querySelector('#botDiv'); 
+            botDiv.style.height = botDiv.style.height == '600px' ? '38px' : '600px';
+        };
+    });
+}());</script>
+</body>
+
+</html>
