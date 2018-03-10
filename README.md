@@ -1,6 +1,6 @@
 # ChatBot Begins With Me
 
-This is a repo for the example code and data for the Chatbot Begins With Me Workshop
+This is a repo for the example code and data for the Chatbot Development Begins With Me Workshop
 
 ## Questions?
 
